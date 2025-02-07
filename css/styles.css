@@ -1,0 +1,213 @@
+/* Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #1d1d1d; /* Fond noir/gris foncé */
+  border-bottom: 3px solid #d4af37; /* Bordure dorée subtile */
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: #d4af37; /* Jaune doré */
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background-color: #d4af37; /* Bordure dorée au survol */
+  transition: width 0.3s ease, left 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navbar-nav .nav-item .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Centrer les éléments de la navbar sur les grands écrans */
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar-nav {
+    text-align: center; /* Centrer le menu sur mobile */
+  }
+  
+  .navbar-nav .nav-item {
+    padding: 10px 0; /* Espace vertical entre les éléments du menu */
+  }
+
+  .navbar-collapse {
+    margin-top: 10px; /* Espacement entre la barre de navigation et le contenu */
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 1.2rem; /* Augmenter la taille du texte sur mobile */
+    padding: 12px 0; /* Réduire la largeur des liens */
+  }
+
+  /* Bouton hamburger personnalisé */
+  .navbar-toggler {
+    border-color: #d4af37; /* Couleur de la bordure du bouton */
+  }
+
+  /* Animation de l'icône hamburger */
+  .navbar-toggler:hover {
+    transform: scale(1.1); /* Agrandir le bouton au survol */
+  }
+}
+
+/* Amélioration visuelle du survol des liens */
+.navbar-nav .nav-item .nav-link.active {
+  color: #f5d300; /* Jaune éclatant pour l'élément actif */
+}
+
+/* Titres */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  color: #333; /* Gris sombre */
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* Section de bienvenue */
+.welcome-section {
+  background-color: #222; /* Fond gris foncé */
+  color: #fff;
+  padding: 50px;
+  border: 5px solid #d4af37; /* Bordure dorée */
+  text-align: center;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Paragraphe */
+p {
+  font-size: 1.2rem;
+  color: #333; /* Gris foncé pour le texte */
+}
+
+/* Boutons */
+.btn.btn-primary {
+  background-color: #facf44; /* Fond doré */
+  color: #222; /* Texte sombre */
+  border: 2px solid transparent;
+  font-weight: bold;
+  padding: 8px 16px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+
+.btn.btn-primary:hover {
+  background-color: #333; /* Fond sombre au survol */
+  color: #fff; /* Texte blanc */
+  border-color: #d4af37; /* Bordure dorée au survol */
+  transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+  margin: 0;
+  background-color: #222;
+  color: #fff;
+  padding: 40px 0;
+  min-height: 150px;
+  position: relative;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.9rem;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+}
+
+.footer ul {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer ul li {
+  margin: 0;
+}
+
+.footer .social-icons i {
+  font-size: 1.25rem;
+  margin: 0;
+  transition: transform 0.3s ease;
+}
+
+.footer .container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.footer .row {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer .col-md-4 {
+  flex: 1;
+}
+
+/* Étapes */
+.step {
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.step:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.step h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 15px;
+  color: #333;
+}
+
+.step p {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 10px;
+}
